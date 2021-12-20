@@ -12,7 +12,14 @@ export default function ServerCategory({ categoryTitle, categoryChannels }) {
   return (
     <Box>
       {categoryTitle && (
-        <Box as="button" display="flex" px="1" alignItems="center">
+        <Box
+          as="button"
+          w="full"
+          px="1"
+          display="flex"
+          alignItems="center"
+          _hover={{ color: "gray.100" }}
+        >
           <Icons.ArrowIcon mr="1" />
           <Text
             fontSize="sm"
