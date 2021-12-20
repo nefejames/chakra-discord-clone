@@ -2,7 +2,7 @@ import { Icon } from "@chakra-ui/react";
 
 export default function AddPersonIcon(props) {
   return (
-    <Icon aria-hidden="false" {...props}>
+    <Icon aria-hidden="false" w="4" h="4" {...props}>
       <path
         fill="currentColor"
         fillRule="evenodd"

@@ -23,7 +23,14 @@ export default function ChannelsPanel({ title, children }) {
         <ChevronIcon ml="auto" />
       </Heading>
 
-      <Box flex="1" p="3" overflowY="scroll" sx={{ "scrollbar-width": "none" }}>
+      <Box
+        flex="1"
+        pt="3"
+        color="gray.300"
+        overflowY="scroll"
+        fontWeight="semibold"
+        sx={{ "scrollbar-width": "none" }}
+      >
         {children}
       </Box>
     </Box>

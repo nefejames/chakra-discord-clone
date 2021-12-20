@@ -1,22 +1,26 @@
 import { useRouter } from "next/router";
-import { Heading, Text, VStack } from "@chakra-ui/react";
+import { Heading, Text, Stack, VStack } from "@chakra-ui/react";
 import { ChannelsPanel, MessagesPanel } from "@components/panels/index";
+import ServerCategory from "@components/ServerCategory";
+import channelsData from "@data/channelsData";
 
 export default function Server() {
   let router = useRouter();
 
   return (
     <>
-      <ChannelsPanel title={`Server ${router.query.id}`}>
-        <Text color="white" fontWeight="medium">
-          Unread Channel
-        </Text>
-        {[...Array(40)].map((_, i) => (
-          <Text key={i} color="gray.300" fontWeight="semibold">
-            Channel {i + 1}
-          </Text>
-        ))}
+      <ChannelsPanel title={`Server ${router.query.cid}`}>
+        <Stack spacing="5">
+          {channelsData.one.categories.map((category, i) => (
+            <ServerCategory
+              key={i}
+              categoryTitle={category.name}
+              categoryChannels={category.channels}
+            />
+          ))}
+        </Stack>
       </ChannelsPanel>
+
       <MessagesPanel>
         <Heading
           as="h2"

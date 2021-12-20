@@ -1,4 +1,5 @@
 import AddPersonIcon from "./AddPersonIcon";
+import ArrowIcon from "./ArrowIcon";
 import BookIcon from "./BookIcon";
 import CheckIcon from "./CheckIcon";
 import ChevronIcon from "./ChevronIcon";
@@ -8,6 +9,7 @@ import SpeakerPhoneIcon from "./SpeakerPhoneIcon";
 import VerifiedIcon from "./VerifiedIcon";
 
 export {
+  ArrowIcon,
   AddPersonIcon,
   BookIcon,
   CheckIcon,

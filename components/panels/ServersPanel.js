@@ -1,6 +1,8 @@
 import { Divider, Image, VStack, Icon } from "@chakra-ui/react";
 import ServerIconLink from "@components/ServerIconLink";
 import { DiscordIcon } from "@components/icons";
+import { useRouter } from "next/router";
+
 //import OldServerIcon from "@components/OldServerIcon";
 //import DiscordIcon from "@components/icons/DiscordIcon";
 
@@ -16,6 +18,8 @@ const servers = [
 ];
 
 export default function ServersPanel() {
+  const router = useRouter();
+
   return (
     <VStack
       bg="gray.800"
@@ -33,7 +37,11 @@ export default function ServersPanel() {
       <Divider w="8" borderColor="white" opacity="0.6" rounded="3xl" />
 
       {servers.map((server, i) => (
-        <ServerIconLink href={`/servers/${server.id}`} key={i}>
+        <ServerIconLink
+          href={`/servers/${server.id}/channels/1`}
+          active={+router.query.sid === +server.id}
+          key={i}
+        >
           <Image
             src={`/images/servers/${server.img}`}
             alt="a discord server's logo"

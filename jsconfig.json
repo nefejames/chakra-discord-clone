@@ -8,6 +8,7 @@
       "@sections/*": ["sections/*"],
       "@layout/*": ["layout/*"],
       "@public/*": ["public/*"],
+      "@data/*": ["data/*"],
       "@lib/*": ["lib/*"]
     }
   }

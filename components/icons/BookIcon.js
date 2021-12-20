@@ -2,7 +2,7 @@ import { Icon } from "@chakra-ui/react";
 
 export default function BookIcon(props) {
   return (
-    <Icon viewBox="0 0 40 40" fill="none" {...props}>
+    <Icon viewBox="0 0 40 40" fill="none" w="5" h="5" {...props}>
       <path
         fill="currentColor"
         fillRule="evenodd"

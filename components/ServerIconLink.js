@@ -2,9 +2,11 @@ import NextLink from "next/link";
 import { Box } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-export default function ServerIconLink({ children, href }) {
+export default function ServerIconLink({ children, href, active }) {
   const router = useRouter();
   const activePath = router.asPath === href;
+
+  const activeServer = active || activePath;
 
   return (
     <Box position="relative">
@@ -15,9 +17,9 @@ export default function ServerIconLink({ children, href }) {
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
-        bg={activePath ? "brand" : "gray.600"}
-        borderRadius={activePath ? "15px" : "3xl"}
-        color={activePath ? "white" : "gray.100"}
+        bg={activeServer ? "brand" : "gray.600"}
+        borderRadius={activeServer ? "15px" : "3xl"}
+        color={activeServer ? "white" : "gray.100"}
         _hover={{
           bg: "brand",
           color: "white",
