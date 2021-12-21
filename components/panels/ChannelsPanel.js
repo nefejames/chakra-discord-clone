@@ -5,15 +5,17 @@ export default function ChannelsPanel({ title, children }) {
   return (
     <Box bg="gray.700" minW="60" display="flex" flexDir="column">
       <Heading
-        as="h2"
-        color="white"
-        fontSize="lg"
-        fontWeight="semibold"
         px="4"
+        as="h2"
         h="12"
         shadow="sm"
+        color="white"
+        fontSize="lg"
         display="flex"
+        cursor="pointer"
         alignItems="center"
+        fontWeight="semibold"
+        _hover={{ bg: "#33363C" }}
       >
         <Box pos="relative" w="4" h="4" mr="1">
           <VerifiedIcon w="4" h="4" color="gray.550" pos="absolute" />
