@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 export default function ServerIconLink({ children, href, active }) {
   const router = useRouter();
   const activePath = router.asPath === href;
-
   const activeServer = active || activePath;
 
   return (

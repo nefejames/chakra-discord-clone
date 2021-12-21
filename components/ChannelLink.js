@@ -9,7 +9,6 @@ export default function ChannelLink({
   secondIcon,
 }) {
   const Icon = icon ? Icons[icon] : Icons.HashTagIcon;
-
   const router = useRouter();
   const active = +channelId === +router.query.cid;
 

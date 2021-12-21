@@ -1,10 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
-import {
-  ArrowIcon,
-  HashTagIcon,
-  BookIcon,
-  SpeakerPhoneIcon,
-} from "@components/icons";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import * as Icons from "@components/icons";
 import ChannelLink from "./ChannelLink";
 
@@ -32,6 +26,7 @@ export default function ServerCategory({ categoryTitle, categoryChannels }) {
         </Box>
       )}
 
+      {/* when I use stack to try adding spacing between the links, the alignment scatters. Strange behavior. Why? */}
       <Box mt="1">
         {categoryChannels.map((channel, i) => (
           <ChannelLink
